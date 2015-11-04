@@ -1,7 +1,7 @@
 filename-doc=doc
 filename-beamer=presentation
-directory-doc=p-doc/
-directory-beamer=p-beamer/
+directory-doc=doc/
+directory-beamer=beamer/
 
 .PHONY: all doc beamer clean
 
