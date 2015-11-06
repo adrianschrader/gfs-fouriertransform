@@ -177,3 +177,8 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+*.wav
+*.dat
+*.sw
+demo/*.png
