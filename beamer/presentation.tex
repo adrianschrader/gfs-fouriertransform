@@ -1,10 +1,14 @@
 \documentclass[10pt]{beamer}
+\usepackage[ngerman]{babel}
 
 \usetheme[background=light,everytitleformat=regular,inner/sectionpage=progressbar,block=fill]{m}
 
 \usepackage[numbers,round]{natbib}
-
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
 \usepackage{booktabs}
+\usepackage{multicol}
 \usepackage[scale=2]{ccicons}
 
 \title{Fourieranalyse}
@@ -15,6 +19,8 @@
 
 \begin{document}
 
+\include{tex/motivation}
+
 \maketitle
 
 \begin{frame}
@@ -24,8 +30,8 @@
 \end{frame}
 
 % ----  CONTENT  ----
-\include{tex/motivation}
 \include{tex/mathematics}
+\include{tex/diagrams}
 \include{tex/applications}
 
 \plain{Fragen?}
@@ -37,5 +43,7 @@
   \bibliographystyle{abbrv}
 
 \end{frame}
+
+%\include{tex/appendix}
 
 \end{document}

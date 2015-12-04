@@ -1,0 +1,32 @@
+Aus der Summe der Orthonormalbasen eines Hilbertraumes lässt sich jede Funktion als Summe eindeutig abbilden. In unserem Falle haben wir mit $ sin(n x)$, $cos(n x)$ und $1$ die Orthonormalbasen bereits gegeben.
+
+\begin{align}
+  f(x) &= \frac{a_0}{2} + \sum_{n = 1}^{\infty} a_n cos(n x) + \sum_{n = 1}^{\infty} b_n sin(n t)
+\end{align}
+
+Der Hilbertraum wird durch ein Skalarprodukt gegeben, aus denen sich Orthogonalitätseigenschaften und Normen ableiten lassen. Wenn wir also das Skalarprodukt finden, können wir Funktionen in vielfache unserer Orthonormalbasen zerlegen. Das Skalarprodukt aus der zu ursprünglichen Funktion und der zu untersuchenden Orthonormalbasis soll dann den entsprechenden Vorfaktor ergeben.
+
+\begin{align}
+  \langle f(x), sin(n x) \rangle &= \langle \frac{a_0}{2}, sin(n x) \rangle \notag\\
+  &+ \sum_{n = 1}^{\infty} a_n \langle cos(n x), sin(n x) \rangle \notag \\
+  &+ \sum_{n = 1}^{\infty} b_n \langle sin(n x), sin(n x) \rangle
+\end{align}
+
+In jedem Hilbertraum muss für das Skalarprodukt $\langle v_n, u_n \rangle = \text{const.} $ und $\langle v_n, u_m \rangle = 0$ gelten. Für die trigonometrischen Funktionen ergibt sich dafür
+
+Zur Zerlegung der Ursprungsfunktion $f(x)$ wird ein dreidimensionaler Vektorraum eingeführt, der durch sein Skalarprodukt definiert ist. Für die Fourieranalyse zeigt sich die Mittelwertsfunktion zwischen $- \pi$ und $\pi$ als besonders zweckmä\ss ig.
+
+\begin{align}
+  \langle f, g \rangle = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cdot g(x) \, dx
+\end{align}
+
+
+
+Für das kartesische Koordinatensystem ergeben sich bsw. die Orthonormalbasen $ A=\begin{bmatrix}
+         X_{t_{k}} \\
+         Y_{t_{k}} \\
+         \dot{X}_{t_{k}}\\
+         \dot{Y}_{t_{k}}
+        \end{bmatrix} $
+
+Für unseren Hilbertraum ergeben sich die Orthonormalbasen $ sin(n x)$, $cos(n x)$ und $1$.

@@ -8,11 +8,14 @@ directory-beamer=beamer/
 all: doc beamer
 
 doc:
-	cd ${directory-doc} && latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make ${filename-doc}.tex
+	cd ${directory-doc} && latexmk -pdf -xelatex -use-make ${filename-doc}.tex
 
 beamer:
 	cd ${directory-beamer} && latexmk -pdf -xelatex -shell-escape -use-make ${filename-beamer}.tex
 
 clean:
+	cd ${directory-doc} && latexmk -c
+	cd ${directory-beamer} && latexmk -c
 	rm -f ${directory-doc}${filename-doc}.{ps,log,aux,out,dvi,bbl,blg,toc,fls,fdb_latexmk}
 	rm -f ${directory-beamer}${filename-beamer}.{ps,log,aux,out,dvi,bbl,blg,toc,fls,fdb_latexmk,nav,snm,vrb}
+	rm -rf **/*.{ps,log,aux,out,dvi,bbl,blg,toc,fls,fdb_latexmk,nav,snm,vrb}

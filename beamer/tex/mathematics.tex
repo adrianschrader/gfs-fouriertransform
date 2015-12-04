@@ -1,1 +1,88 @@
-\section{Mathematischer Hintergrund}
+\section{Einführung und Herleitung}
+
+\begin{frame}
+  \frametitle{Aufgabenstellung}
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{img/intro_transform1}
+    \caption{Beispiel einer Fouriertransformation (https://i.ytimg.com/vi/-GYB7khbIA0/maxresdefault.jpg, 08.11.15)}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Aufgabenstellung}
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{img/intro_transform2}
+    \caption{Beispiel einer Fouriertransformation (https://i.ytimg.com/vi/-GYB7khbIA0/maxresdefault.jpg, 08.11.15)}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Grund- und Oberschwingungen}
+
+  \begin{align*}
+    \begin{split}
+      f(t) = \frac{a_0}{2} &+ a_1 \cdot cos(t) + a_2 \cdot cos(2 t) + a_3 \cdot cos(3 t) + ... \\ &+ b_1 \cdot sin(t) + b_2 \cdot sin(2 t) +  b_3 \cdot sin(3 t) + ... \\
+    \end{split}
+  \end{align*}
+
+  \begin{align*}
+    f(t) &= \alpha_0 + \alpha_1 \cdot e^{i \cdot t} + \alpha_2 \cdot e^{i \cdot ( 2 t)} + \alpha_3 \cdot e^{i \cdot (3 t)} + ... \\
+         &= \sum_{n = 0}^{\infty} \alpha_n \cdot e^{i\cdot  n\cdot  t}
+  \end{align*}
+  \begin{align*}
+    e^{i \cdot n \cdot t} = cos(n \cdot t) + i \cdot sin(n \cdot t) && i^2 = -1
+  \end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Mathematische Herleitung}
+
+  \begin{align*}
+    e^{i \cdot n \cdot t} = cos(n \cdot t) + i \cdot sin(n \cdot t) && \{ n \not= m \, \text{  und  } \, n, m \in \mathbb{Z} \}
+  \end{align*}
+
+  \begin{align*}
+    &\int_{-\pi}^{\pi} e^{i \cdot n \cdot t} \, dt &&  &&= 0 \\
+    &\int_{-\pi}^{\pi} e^{i \cdot n \cdot t} \cdot e^{-i \cdot m \cdot t} \, dt &&= \int_{-\pi}^{\pi} e^{i \cdot (n - m) \cdot t} \, dt &&= 0 \\
+    &\int_{-\pi}^{\pi} e^{i \cdot n \cdot t} \cdot e^{-i \cdot n \cdot t} \, dt &&= \int_{-\pi}^{\pi} e^{0} \, dt &&= 2 \pi
+  \end{align*}
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Mathematische Herleitung}
+
+  \begin{align*}
+f(t) &= \alpha_0 + \alpha_1 \cdot e^{i \cdot t} + \alpha_2 \cdot e^{i \cdot ( 2 t)} + \alpha_3 \cdot e^{i \cdot (3 t)} + ...
+  \end{align*}
+
+  \only<1>{
+  \begin{align*}
+    \int_{-\pi}^{\pi} f(t) \cdot e^{-i \cdot (2 t)} \, dt &= \int_{-\pi}^{\pi} \alpha_0 \cdot e^{-i \cdot (2 t)} \, dt \\
+    &+ \int_{-\pi}^{\pi} \alpha_1 \cdot e^{i \cdot t} \cdot e^{-i \cdot (2 t)} \, dt \\
+    &+ \int_{-\pi}^{\pi} \alpha_2 \cdot e^{i \cdot (2 t)} \cdot e^{-i \cdot (2 t)}\, dt \\
+    &+ \int_{-\pi}^{\pi} \alpha_3 \cdot e^{i \cdot (3 t)} \cdot e^{-i \cdot (2 t)}\, dt \\
+    &+ ...
+  \end{align*}
+  }
+\end{frame}
+
+\begin{frame}
+  \frametitle{Fourier-Transformaton}
+
+  \begin{align*}
+    \int_{-\pi}^{\pi} f(t) \cdot e^{-i \cdot (2 t)} \, dt &= 0 + 0 + 2 \pi \cdot \alpha_2 + 0 + 0 ... \\
+    &= 2 \pi \cdot \alpha_2
+  \end{align*}
+
+  \only<2>{
+  \begin{align*}
+    \mathcal{F}(f)(\omega) = \hat{f}(\omega) = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) \cdot e^{-i \cdot n \cdot t} \, dt \\
+  \end{align*}
+  }
+\end{frame}
