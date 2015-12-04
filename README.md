@@ -1,6 +1,10 @@
 # gfs-fouriertransform
 Presentation and project documentation about the basics of integral transformation and Fourier spectral analysis.
 
+## Abstract from the documentation (german)
+In allen Wissenschaftsfeldern ist die Interferenz von Signalen ein Problem für Analytik und Verarbeitung. Die Fourieranalyse und ihre Varianten bilden bis heute ein mächtiges Werkzeug, um zeitabhängige Signale in ihr Frequenzsprektrum aufzuspalten und zu analysieren. Dieses Paper bietet ausführlichere Beschreibungen zu den Beispielen und mathematische Hintergründe zum Vortrag \glqq Fourieranalyse - Hintergründe und Anwendungen von Frequenzanalysen\grqq.
+
+
 ## Building instructions
 This projects uses a central Makefile for all building activities that depends on your command line LaTeX distribution.
 
@@ -17,8 +21,8 @@ make clean # Delete all temporary build files, will preserve your PDF output
 All projects share the same resources via symlinks. Should those not work on your workstation update them like this:
 
 ```bash
-sudo chmod +x symlinks.sh
-./symlinks.sh
+sudo chmod +x configure.sh
+./configure.sh
 ```
 
 ## Dependencies
@@ -26,17 +30,4 @@ Make sure you have following software installed and updated on your workstation:
 
 * LaTeX distribution for your operating system (e.g [MacTeX](https://tug.org/mactex/))
 * [mtheme](matze/mtheme) beamer theme
-* Python 2.7 or 3.0
-  + [NumPy](http://www.numpy.org)
-  + [SciPy](http://www.scipy.org/scipylib/index.html)
-  + [matplotlib](http://matplotlib.org)
 * Xcode command line tools for make
-
-Use this bash snippet to install the python dependencies via pip
-
-```bash
-wget https://bootstrap.pypa.io/get-pip.py
-sudo python get-pip.py
-
-pip install numpy scipy matplotlib
-```
